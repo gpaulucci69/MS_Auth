@@ -55,6 +55,9 @@ $ yarn run test:e2e
 
 # test coverage
 $ yarn run test:cov
+
+# dev coverage
+$ yarn run start:fast
 ```
 
 ## Deployment
@@ -96,3 +99,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+rmdir /s /q dist
+npx tsc -p tsconfig.json
+node dist/main.js
