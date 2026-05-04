@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instalamos todas las dependencias (incluyendo las de desarrollo para compilar)
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 # Copiamos el resto del código y el tsconfig que ya corregimos
 COPY . .
