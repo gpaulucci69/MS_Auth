@@ -13,6 +13,12 @@ export class AuthController {
     return res.redirect(url);
   }
 
+  @Get('publico')
+  @Public()
+  findAllFree() {
+    return 'Cualquiera puede ver esto';
+  }
+
   @Get('privado')
   @Roles({ roles: ['admin'] }) // Solo usuarios con rol 'admin'
   findOneSafe() {
